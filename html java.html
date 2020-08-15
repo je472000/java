@@ -6,20 +6,37 @@
     <title>generate random password</title>
 </head>
 <body>
-    <script>       
+    <script>  
+    /*first try at window*/
+    function password() {
+  window.alert("generate random password");
+ var alphabet = window.prompt("would you like to use only letters")
+ var cases = window.prompt("would you like to use lower case")
+ var numbers = window.prompt("would you like to use numbers")
+ var signs = window.prompt("would you like to use signs")
+}
            /*initial function the split into available options*/
          var pass = "";
+         var pass1 = "";
+         var pass2 = "";
+         var pass3 = "";
          var str = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"  
         var lstr = "abcdefghijklmnopqrstuvwxyz"
         var num = "123456789"
         var sign = "!@#$%^&*"
-
-        for (i = 1; i <= 8; i++;) {var char = Math.floor (Math.random()
+           /*first try to link the elements of the function*/
+        for (i = 8; i <= 128; i++;) {var char = Math.floor (Math.random()
                                    * str.length + 1);
 
-                                   pass += str.charAt (char)}
+                                   pass += str.charAt (str)
+                                   pass1 += str.charAt (str + lstr)
+                                   pass2 += str.charAt (str + lstr + num)
+                                   pass3 += str.charAt (str + lstr + num + sign)}
 
-                                   return pass;
+                        if (alphabet){return pass;)
+                        if (cases){return pass1;}
+                        if (numbers){return pass2;}
+                        if (signs){return pass3;}
     </script>
 </body>
 </html>
